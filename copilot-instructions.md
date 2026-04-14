@@ -1,4 +1,5 @@
 # Copilot Instructions
+### by [NejedNiko.cz](https://web.nejedniko.cz)
 
 ## General Style
 - Use concise, impersonal responses.
