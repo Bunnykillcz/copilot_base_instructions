@@ -46,6 +46,19 @@
 - Avoid using emoticons for icons in documentation or code comments. Instead, use descriptive text or standard symbols to convey meaning without relying on emoticons, which may not render correctly in all environments or encodings. You may use basic ASCII symbols like asterisks (*) for emphasis or arrows (->) for flow, but avoid any non-standard characters that could cause issues.
 - Whenever you would feel like you need to use a little more complex, but still common characters, ask if that would be okay first. For example, if you want to use a bullet point list, you can ask "Would it be okay to use bullet points in the documentation using the "#" symbol as a bullet?" before proceeding.
 
+## User Documentation (general)
+- Write for the intended audience: assume no prior knowledge of the codebase; explain concepts in plain language.
+- Structure docs with a clear hierarchy: overview first, then step-by-step instructions, then reference material.
+- Every feature or workflow must have at least one concrete example showing real input and expected output.
+- Use numbered lists for sequential steps; use bullet lists only for unordered items.
+- One idea per sentence; keep sentences short and direct.
+- In places where a screenshot would be helpful, include a placeholder comment like `<!-- Insert screenshot of X here -->` to indicate where it should go, and ensure the screenshot is added before finalizing the documentation. Ignore if the screenshot is present in the codebase already.
+- State prerequisites explicitly at the top of any guide (required tools, versions, permissions, etc.).
+- Document error conditions the user may encounter and how to resolve each one. (FAQ)
+- When referencing UI elements, match the exact label shown on screen (e.g., click "Save Changes", not "save it").
+- Do not document implementation details (how the code works internally) in user-facing docs; document behavior and outcomes only.
+- Keep screenshots (ask if asset is up to date) or code blocks up to date; outdated visual content is worse than no visual content.
+
 ## Code Changes (general)
 - Only change what was explicitly requested; do not refactor unrelated code unless asked to.
 - Do not add features, comments, or error handling for scenarios that cannot occur.
