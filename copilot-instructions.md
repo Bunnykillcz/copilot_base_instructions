@@ -29,6 +29,87 @@
 ## Settings & Configuration (general)
 - Store settings in JSON files.
 
+## Project File Structure
+
+### Web Application
+```
+{root}/
+  assets/                               - static files (images, fonts, icons)
+  templates/{template_name}/            - stylesheets
+  javascript/                           - client-side scripts
+  pages/                                - page content files
+  api/                                  - server-side API endpoints
+  func/                                 - backend business logic and utility functions
+  cache/                                - generated/cached output files
+  docs/                                 - documentation
+  config/                               - configuration files (not committed if sensitive)
+```
+
+### Windows Desktop Application (WPF / WinForms)
+```
+{root}/
+  Assets/         - images, icons, embedded resources
+  Models/         - data models and entities
+  ViewModels/     - ViewModels (MVVM) or presenters
+  Views/          - windows, user controls, pages (XAML or designer files)
+  Services/       - business logic, data access, external integrations
+  Helpers/        - small utility classes and extension methods
+  Config/         - app configuration files
+  docs/           - documentation
+```
+
+### Mobile Application (Flutter / Android / iOS)
+```
+{root}/
+  lib/            - application source code
+    models/       - data models
+    screens/      - full-page UI screens
+    widgets/      - reusable UI components
+    services/     - business logic, API calls, data access
+    providers/    - state management (providers, blocs, etc.)
+    utils/        - utility functions and helpers
+  assets/         - images, fonts, static files
+  test/           - unit and widget tests
+  docs/           - documentation
+```
+
+### Game
+```
+{root}/
+  src/            - game source code
+    entities/     - game objects (player, enemies, items)
+    systems/      - game logic systems (physics, AI, input, rendering)
+    screens/      - menus, HUD, game over screens
+    utils/        - helper functions and shared utilities
+  assets/
+    sprites/      - 2D artwork and textures
+    audio/        - music and sound effects
+    fonts/        - font files
+    maps/         - level and map data
+  config/         - game settings and constants
+  docs/           - documentation
+```
+
+### CLI Tool / Script
+```
+{root}/
+  src/            - source code (commands, logic)
+  config/         - default configuration files
+  tests/          - automated tests
+  docs/           - documentation
+  README.md       - quick-start and usage reference
+```
+
+### Library / Package
+```
+{root}/
+  src/            - public library source code
+  tests/          - unit and integration tests
+  examples/       - standalone usage examples
+  docs/           - API reference and guides
+  README.md       - overview, installation, and quick example
+```
+
 ## Language & Localization (general)
 - Store language data in JSON files.
 - Use a dedicated class to load/access language scopes.
