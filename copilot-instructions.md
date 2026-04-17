@@ -146,6 +146,7 @@
 - Only change what was explicitly requested; do not refactor unrelated code unless asked to.
 - Do not add features, comments, or error handling for scenarios that cannot occur.
 - Prefer the simplest solution that satisfies the requirement and works with the existing codebase. Avoid over-engineering or adding unnecessary complexity.
+- Never use terminal commands, scripts, or automated tools to perform file edits - not even when changes span many files or locations. Always apply every edit directly using file editing tools, one change at a time. Running a script to bulk-edit is not acceptable as a shortcut.
 
 ## Security (general)
 - Validate and sanitize every input at the system boundary; whitelist expected values where possible.
