@@ -22,6 +22,8 @@
 - Use ALL_CAPS for constants and ENUMs.
 - Group related variables at the top of the file.
 - Use descriptive names for paths/configuration variables.
+ - Prefer readable, easily debuggable variable names; favor clarity over brevity.
+ - Split any complex multiline condition into intermediate, well-named variables, then combine those variables in the final condition to improve readability, debugging, and maintenance.
 
 ## File Paths & Resource Management (general)
 - Store resource paths as variables at the top of the file.
