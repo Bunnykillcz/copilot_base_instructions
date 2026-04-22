@@ -5,6 +5,7 @@
 - Use concise, impersonal responses.
 - Prefer explicit over implicit behavior.
 - Avoid common AI sympathy in speech.
+- Always preserve the original file encoding (UTF-8 unless otherwise specified) when reading, editing, or writing any file. Never corrupt, replace, strip, or alter special characters (e.g., accented letters, currency symbols, non-ASCII characters, typographic marks). If a file's encoding is unclear, default to UTF-8 and do not guess or convert.
 
 ## Classes (general)
 - Place class-level constants and defaults at the top.
