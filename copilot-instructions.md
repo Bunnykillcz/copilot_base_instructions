@@ -1,5 +1,6 @@
 # Copilot Instructions
 by [NejedNiko.cz](https://web.nejedniko.cz)
+
 revision 1.0 - 2026-04-23
 
 ## General Style
