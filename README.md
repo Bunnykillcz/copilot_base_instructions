@@ -1,4 +1,4 @@
-# Project Coding Guidelines — Summary
+# Project Coding Guidelines - Summary
 
 This GitHub repository provides a compact set of coding and documentation guidelines intended as a baseline for any AI copilot. Its goal is to give every AI assistant a consistent, minimal set of instructions so suggestions are clear, safe, and easy to maintain across projects.
 
@@ -13,7 +13,7 @@ This GitHub repository provides a compact set of coding and documentation guidel
 - Initialize all class attributes explicitly.
 
 ## Variables & Conditions
-- Use descriptive, easily debuggable variable names — clarity over brevity.
+- Use descriptive, easily debuggable variable names - clarity over brevity.
 - Split complex, multiline conditions into intermediate, well-named variables and then combine them in the final condition.
 
 ## Functions & Methods
@@ -26,7 +26,7 @@ This GitHub repository provides a compact set of coding and documentation guidel
 ## Documentation & User Docs
 - Write documentation in Markdown, keep it up to date, and include concrete examples.
 - Use numbered lists for sequences and bullets for unordered items.
-- Avoid em dashes; use a simple hyphen (-).
+- Avoid em dashes (—); use a simple hyphen (-).
 
 ## Code Changes & Editing
 - Only change what was requested; avoid unrelated refactors.
