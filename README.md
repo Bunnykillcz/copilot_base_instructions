@@ -4,7 +4,7 @@ A reusable baseline instruction set for GitHub Copilot (and compatible AI assist
 
 **Files in this repo:**
 - `copilot-instructions.md` - the instruction file read by the AI
-- `startup.md` - a per-repository override template (copy this into your project)
+- `startup.md` - a per-repository override template
 
 ---
 
