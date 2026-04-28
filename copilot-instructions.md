@@ -121,6 +121,9 @@ revision 2.0 - 2026-04-27
 - Prefer `async`/`await` over `.Result` or `.Wait()`.
 - Throw specific exception types; avoid bare `Exception`.
 - One class per file; filename matches class name.
+- Especially avoid placing constant / static strings in code; prefer resource files or configuration.
+- OR use nameof() and typeof() whenever possible for getting the parameter or type name as a string.
+- Behave as pro-obfuscation as possible: avoid reflection, dynamic, or other features that hinder static analysis and renaming. 
 
 ### WPF
 - MVVM strictly: Views contain XAML + minimal UI-only code-behind; logic in ViewModels.
