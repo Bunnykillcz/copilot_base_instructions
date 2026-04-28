@@ -1,7 +1,7 @@
 # Copilot Instructions
 by [NejedNiko.cz](https://web.nejedniko.cz)
 
-revision 2.0 - 2026-04-27
+revision 2.1 - 2026-04-28
 
 > **Base template** - trim or extend per repository.
 > For per-repo overrides, see [Startup Initialization](#startup-initialization) at the end.
@@ -12,6 +12,12 @@ revision 2.0 - 2026-04-27
 - Concise, impersonal responses. No AI sympathy phrases ("I hope this helps", "Let me know if you have any questions") in speech, code comments, documentation, or commit messages.
 - Prefer explicit over implicit behavior.
 - Do not use emoticons, em dashes, or non-ASCII decorative characters in code or documentation. Use plain ASCII (hyphens, asterisks, arrows `->`) unless the project explicitly allows otherwise.
+
+## Clarification Before Implementation
+- Before writing code, if the requirements, intent, or relevant structure are unclear, **ask targeted clarifying questions** rather than generating potentially incorrect output.
+- Confirm assumptions about architecture, expected behavior, or integration points before proceeding.
+- For requests that span multiple files or involve non-trivial logic, briefly state your understanding of the task and ask whether it is correct before starting.
+- This is the default behavior - do not skip it to save a round-trip.
 
 ## Encoding (Critical)
 - **All files are UTF-8 unless the project explicitly states otherwise.**
@@ -68,7 +74,9 @@ revision 2.0 - 2026-04-27
 - Business logic belongs in dedicated backend files/functions.
 
 ## Frontend & JavaScript
-- Use `fetch()` for AJAX; handle both success and error states.
+- Follow the established patterns, libraries, and architecture if already present in the project. Do not introduce a different approach (e.g., a different HTTP client, state management pattern, or caching strategy) unless explicitly asked.
+- If this is a new frontend without existing patterns, ask for preferences before choosing an approach.
+- Respect existing dependencies; do not add new ones without confirmation.
 - Never inject unescaped server data into the DOM.
 - Document `localStorage`/cookie key names when used for persistent client state.
 - Deduplicate event-driven actions with a persistent client-side flag.
@@ -107,6 +115,7 @@ revision 2.0 - 2026-04-27
 
 ## Settings & Configuration
 - Store settings in JSON files.
+- Do not access environment variables directly in components or views; use a config module as a single source of truth.
 
 ---
 
@@ -141,6 +150,17 @@ revision 2.0 - 2026-04-27
 - Use one state management approach consistently; do not mix.
 - Always dispose controllers in `dispose()`.
 
+### React / TypeScript
+- Use a single package manager; do not mix `npm`, `yarn`, and `pnpm`. Lock versions via a lockfile.
+- Define `dev`, `build`, `lint`, and `type-check` scripts in `package.json`.
+- Organize `src/` by responsibility: `api/`, `components/`, `pages/`, `routes/`, `hooks/`, `store/`, `utils/`, `config/`, `styles/`.
+- Enforce unidirectional data flow: API -> data layer -> hooks -> components -> UI. Never call the API directly inside a UI component.
+- Prefer functional components; one responsibility per component. Extract reusable logic into hooks.
+- Hooks must follow the Rules of Hooks (no conditional calls); always prefix with `use`.
+- Use declarative routing; routing files define paths only - page logic stays in page components.
+- Use local state by default; introduce global state only when necessary. Derive state instead of duplicating it.
+- No `any` unless justified. No unused exports or dead code.
+
 ---
 
 ## Startup Initialization
@@ -149,4 +169,9 @@ revision 2.0 - 2026-04-27
 Check whether `startup.md` exists at the repository root or at `.github/startup.md`.
 If it exists, read it and execute its instructions fully before proceeding.
 If it does not exist, continue with these base instructions as-is.
+
+**After reading `startup.md` and surveying the repository structure:**
+- Summarize your understanding of the project: its purpose, key directories, primary technologies, and any conventions stated in `startup.md`.
+- Explicitly ask whether this interpretation is correct before doing any implementation work.
+- This confirmation step is mandatory - do not skip it even if the structure seems obvious.
 
