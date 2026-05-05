@@ -1,7 +1,7 @@
 # Copilot Instructions
 by [NejedNiko.cz](https://web.nejedniko.cz)
 
-revision 2.1 - 2026-04-28
+revision 2.2 - 2026-05-05
 
 > **Base template** - trim or extend per repository.
 > For per-repo overrides, see [Startup Initialization](#startup-initialization) at the end.
@@ -107,6 +107,26 @@ revision 2.1 - 2026-04-28
 - Reference UI elements by their exact on-screen label.
 - Do not expose implementation details in user-facing docs - document behavior and outcomes.
 - Where a screenshot would help, add `<!-- Insert screenshot of X here -->` as a placeholder.
+
+## Writing & Prose Style
+
+- Do not use polished AI-explainer cadence. Write direct, grounded prose, not motivational or TED-talk rhythm.
+- Avoid repeated sentence stacks: multiple short declarative sentences with the same grammar followed by a colorful punchline. Combine related negations or points into a single sentence instead.
+  - Bad: "AI is not new. AI is not magic. AI is not alive. AI is not some creature hiding inside a datacenter."
+  - Better: "AI is not magic and it is not alive. It is software doing a job, and people keep arguing about it like it secretly has a soul."
+- Avoid fake rhetorical balance patterns such as:
+  - "not X, not Y, but Z"
+  - "sometimes useful, sometimes dangerous, always..."
+  - "the problem is not A, the problem is B"
+  - "it can X, it can Y, it can Z"
+  - "understand X, understand Y, understand Z"
+- Do not force even paragraph rhythm. Short and longer sentences can coexist without a dramatic beat at the end.
+- Do not add punchline metaphors or colorful closers. If a phrase sounds like it was added to make the text spicy, remove it.
+- Do not use comparisons or analogies unless the user explicitly creates one or asks for one. Do not introduce analogies like "AI is like a hammer / car / worker / mirror / calculator / knife."
+- If the user provides a comparison, keep it close to their wording and purpose. Do not expand it into a metaphor chain or decorative explanation.
+- When explaining responsibility, use direct cause and effect rather than analogy-driven logic: "If you give an AI system access to live data, money, accounts, or production systems, you are responsible for the permissions, limits, backups, and review."
+- Do not add animal metaphors, cinematic imagery, fantasy phrasing, or fake witty endings.
+- Prefer writing that is direct, slightly imperfect, and opinionated where appropriate. Human writing is allowed to be uneven.
 
 ## Localization
 - Store language data in JSON files.

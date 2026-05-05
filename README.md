@@ -53,6 +53,11 @@ The instructions are written for the AI, not for humans. This README is the huma
 - User-facing docs: plain language, concrete examples, numbered steps for sequences.
 - No implementation details in user docs - document behavior, not internals.
 
+### Writing & prose style
+- No AI-explainer cadence, TED-talk rhythm, or motivational phrasing.
+- No repeated sentence stacks (multiple short declaratives followed by a colorful punchline). Combine related points into one sentence.
+- No analogies or comparisons unless the user explicitly provides one. Keep user-provided comparisons close to their wording; do not expand them.
+
 ---
 
 ## Language-specific highlights
